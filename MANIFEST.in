@@ -1,0 +1,4 @@
+include COPYING
+include CHANGES
+include VERSION.txt
+include README.rst
