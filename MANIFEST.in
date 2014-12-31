@@ -1,4 +1,4 @@
 include COPYING
-include CHANGES
+include CHANGES.rst
 include VERSION.txt
 include README.rst

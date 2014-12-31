@@ -67,7 +67,7 @@ setup_info = {
     'name': 'MYAPP',
     'version': readfile('VERSION.txt').strip(),
     'description': 'SOME_DESCRIPTION',
-    'long_description': readfile('README.rst'),
+    'long_description': readfile('README.rst') + readfile('CHANGES.rst'),
 
     'author': 'mete0r',
     'author_email': 'mete0r@sarangbang.or.kr',
