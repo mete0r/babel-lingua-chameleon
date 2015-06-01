@@ -111,10 +111,18 @@ setup_info = {
         'test': tests_require,
     },
     'entry_points': {
-        'console_scripts': ['MYAPP = MYAPP.cli:main'],
-        'zc.buildout': ['default = MYAPP.recipe:Recipe'],
-        'zc.buildout.uninstall': ['default = MYAPP.recipe:uninstall'],
-        'paste.app_factory': ['main = MYAPP.wsgi:app_factory'],
+        'console_scripts': [
+            'MYAPP = MYAPP.cli:main'
+        ],
+        'zc.buildout': [
+            'default = MYAPP.recipe:Recipe'
+        ],
+        'zc.buildout.uninstall': [
+            'default = MYAPP.recipe:uninstall'
+        ],
+        'paste.app_factory': [
+            'main = MYAPP.wsgi:app_factory'
+        ],
     },
     'classifiers': [
         # 'Development Status :: 4 - Beta',
