@@ -63,6 +63,24 @@ def readfile(path):
         return f.read()
 
 
+def alltests():
+    import sys
+    import unittest
+    import zope.testrunner.find
+    import zope.testrunner.options
+    here = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+    args = sys.argv[:]
+    defaults = ['--test-path', here]
+    options = zope.testrunner.options.get_options(args, defaults)
+    suites = list(zope.testrunner.find.find_suites(options))
+    return unittest.TestSuite(suites)
+
+
+tests_require = [
+    'zope.testrunner',
+]
+
+
 setup_info = {
     'name': 'MYAPP',
     'version': readfile('VERSION.txt').strip(),
@@ -75,11 +93,17 @@ setup_info = {
     # 'url': 'https://github.com/mete0r/MYAPP',
 
     'packages': [
-        'MYAPP'
+        'MYAPP',
+        'MYAPP.tests',
     ],
     'package_dir': {'': '.'},
     'install_requires': [
     ],
+    'test_suite': '__main__.alltests',
+    'tests_require': tests_require,
+    'extras_require': {
+        'test': tests_require,
+    },
     'entry_points': {
         'console_scripts': ['MYAPP = MYAPP.cli:main'],
         'zc.buildout': ['default = MYAPP.recipe:Recipe'],
