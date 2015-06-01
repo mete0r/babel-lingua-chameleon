@@ -1,3 +1,6 @@
 include COPYING
 include CHANGES.rst
 include README.rst
+include *.py
+include buildout.cfg
+include tox.ini
