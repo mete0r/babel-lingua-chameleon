@@ -63,6 +63,12 @@ def readfile(path):
         return f.read()
 
 
+@setup_dir
+def get_version():
+    from MYAPP import __version__
+    return __version__
+
+
 def alltests():
     import sys
     import unittest
@@ -83,7 +89,7 @@ tests_require = [
 
 setup_info = {
     'name': 'MYAPP',
-    'version': readfile('VERSION.txt').strip(),
+    'version': get_version(),
     'description': 'SOME_DESCRIPTION',
     'long_description': readfile('README.rst') + readfile('CHANGES.rst'),
 
