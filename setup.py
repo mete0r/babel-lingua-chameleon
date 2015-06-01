@@ -19,6 +19,7 @@
 from __future__ import with_statement
 from contextlib import contextmanager
 import os.path
+import sys
 
 
 def setup_dir(f):
@@ -59,7 +60,11 @@ def import_setuptools():
 
 @setup_dir
 def readfile(path):
-    with open(path) as f:
+    if sys.version_info.major == 3:
+        f = open(path, encoding='utf-8')
+    else:
+        f = open(path)
+    with f:
         return f.read()
 
 
