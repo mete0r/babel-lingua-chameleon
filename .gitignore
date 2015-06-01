@@ -1,5 +1,6 @@
 /.eggs
 /.installed.cfg
+/.tox
 /bin
 /develop-eggs
 /eggs
