@@ -1,2 +1,4 @@
-MYAPP : SOME DESCRIPTION
-========================
+MYAPP
+=====
+
+SOME_DESCRIPTION
