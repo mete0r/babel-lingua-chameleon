@@ -59,7 +59,7 @@ def import_setuptools():
 
 @setup_dir
 def readfile(path):
-    with file(path) as f:
+    with open(path) as f:
         return f.read()
 
 
