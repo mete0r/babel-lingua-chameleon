@@ -16,7 +16,7 @@
 #   You should have received a copy of the GNU Affero General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-from MYAPP.cli import main
+from .cli import main
 
 
 if __name__ == '__main__':
