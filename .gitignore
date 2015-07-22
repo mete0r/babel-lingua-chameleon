@@ -8,10 +8,14 @@
 /eggs
 /include
 /lib
+/lib-python
+/lib_pypy
 /local
 /parts
 /pip-selfcheck.json
 /setuptools-*
+/share
+/site-packages
 .*.sw?
 *.pyc
 *.pyo
