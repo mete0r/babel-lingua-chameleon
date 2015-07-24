@@ -20,14 +20,17 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 
 from unittest import TestCase
-from unittest import makeSuite
+import os.path
+import shutil
 
 
-class MYAPP_Test(TestCase):
+class AppTest(TestCase):
+
+    def setUp(self):
+        name = self.id()
+        if os.path.exists(name):
+            shutil.rmtree(name)
+        os.mkdir(name)
 
     def test_nothing(self):
         pass
-
-
-def test_suite():
-    return makeSuite(MYAPP_Test)
