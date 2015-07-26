@@ -15,4 +15,5 @@
 .*.sw?
 *.pyc
 *.pyo
+*$py.class
 *.egg-info
