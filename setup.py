@@ -104,7 +104,14 @@ setup_info = {
         'MYAPP',
         'MYAPP.tests',
     ],
-    'package_dir': {'': '.'},
+    'package_dir': {
+        '': '.'
+    },
+    'package_data': {
+        # 'MYAPP.tests': [
+        #   'files/*',
+        # ]
+    },
     'install_requires': [
     ],
     'test_suite': '__main__.alltests',
