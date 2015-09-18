@@ -3,6 +3,7 @@
 /.installed.cfg
 /.tox
 /bin
+/build
 /develop-eggs
 /dist
 /eggs
