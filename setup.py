@@ -102,6 +102,7 @@ setup_info = {
 
     'packages': [
         'MYAPP',
+        'MYAPP.recipe',
         'MYAPP.tests',
     ],
     'package_dir': {
