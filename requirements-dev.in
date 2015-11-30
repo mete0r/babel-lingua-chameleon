@@ -1,6 +1,7 @@
 check-manifest
 pip-tools
 pyroma
+sphinx
 tox
 wheel
 zc.buildout
