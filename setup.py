@@ -105,13 +105,14 @@ setup_info = {
         'MYAPP.recipe',
         'MYAPP.tests',
     ],
+    # do not use '.'; just omit to specify setup.py directory
     'package_dir': {
-        '': '.'
+        # '': 'src',
     },
     'package_data': {
         # 'MYAPP.tests': [
         #   'files/*',
-        # ]
+        # ],
     },
     'install_requires': install_requires,
     'test_suite': '__main__.alltests',
@@ -121,16 +122,16 @@ setup_info = {
     },
     'entry_points': {
         'console_scripts': [
-            'MYAPP = MYAPP.cli:main'
+            'MYAPP = MYAPP.cli:main',
         ],
         'zc.buildout': [
-            'default = MYAPP.recipe:Recipe'
+            'default = MYAPP.recipe:Recipe',
         ],
         'zc.buildout.uninstall': [
-            'default = MYAPP.recipe:uninstall'
+            'default = MYAPP.recipe:uninstall',
         ],
         'paste.app_factory': [
-            'main = MYAPP.wsgi:app_factory'
+            'main = MYAPP.wsgi:app_factory',
         ],
     },
     'classifiers': [
