@@ -1,6 +1,12 @@
 include COPYING
 include CHANGES.rst
+include Makefile
 include README.rst
 include *.py
 include buildout.cfg
+include requirements-app.in
+include requirements-dev.in
+include requirements-dev.txt
+include requirements-test.in
+include requirements.txt
 include tox.ini

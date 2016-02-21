@@ -83,9 +83,9 @@ def alltests():
     return unittest.TestSuite(suites)
 
 
-tests_require = [
-    'zope.testrunner',
-]
+install_requires = readfile('requirements-app.in')
+
+tests_require = readfile('requirements-test.in')
 
 
 setup_info = {
@@ -113,8 +113,7 @@ setup_info = {
         #   'files/*',
         # ]
     },
-    'install_requires': [
-    ],
+    'install_requires': install_requires,
     'test_suite': '__main__.alltests',
     'tests_require': tests_require,
     'extras_require': {

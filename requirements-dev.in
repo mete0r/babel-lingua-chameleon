@@ -1,0 +1,7 @@
+check-manifest
+pip-tools
+pyroma
+tox
+wheel
+zc.buildout
+zest.releaser
