@@ -21,4 +21,5 @@
 *.pyc
 *.pyo
 *$py.class
+*.mo
 *.egg-info

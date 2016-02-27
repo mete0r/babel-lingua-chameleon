@@ -10,6 +10,9 @@ include requirements-dev.txt
 include requirements-test.in
 include requirements.txt
 include tox.ini
+include MYAPP/locale/MYAPP.pot
+include MYAPP/locale/*/LC_MESSAGES/*.po
+exclude MYAPP/locale/*/LC_MESSAGES/*.mo
 recursive-include docs *.bat
 recursive-include docs *.py
 recursive-include docs *.rst

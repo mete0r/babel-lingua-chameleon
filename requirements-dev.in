@@ -1,3 +1,4 @@
+babel
 check-manifest
 pip-tools
 pyroma

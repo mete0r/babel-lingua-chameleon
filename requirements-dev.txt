@@ -5,7 +5,7 @@
 #    pip-compile requirements-app.in
 #
 alabaster==0.7.7          # via sphinx
-babel==2.2.0              # via sphinx
+babel==2.2.0
 check-manifest==0.31
 click==6.2                # via pip-tools
 colorama==0.3.6           # via zest.releaser

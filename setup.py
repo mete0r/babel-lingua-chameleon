@@ -18,6 +18,7 @@
 #
 from __future__ import with_statement
 from contextlib import contextmanager
+from distutils.command.build import build as _build
 import io
 import os.path
 
@@ -110,6 +111,9 @@ setup_info = {
         # '': 'src',
     },
     'package_data': {
+        'MYAPP': [
+            'locale/*/*/*.mo',
+        ],
         # 'MYAPP.tests': [
         #   'files/*',
         # ],
@@ -121,7 +125,13 @@ setup_info = {
         'test': tests_require,
     },
     'setup_requires': [
+        'babel',
     ],
+    'message_extractors': {
+        'MYAPP': [
+            ('**.py', 'python', None),
+        ]
+    },
     'entry_points': {
         'console_scripts': [
             'MYAPP = MYAPP.cli:main',
@@ -151,9 +161,18 @@ setup_info = {
 }
 
 
+class build(_build):
+    def run(self):
+        self.run_command('compile_catalog')
+        _build.run(self)
+
+
 @setup_dir
 def main():
     setuptools = import_setuptools()
+    setup_info['cmdclass'] = {
+        'build': build
+    }
     setuptools.setup(**setup_info)
 
 
