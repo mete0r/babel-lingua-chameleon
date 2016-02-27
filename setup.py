@@ -120,6 +120,8 @@ setup_info = {
     'extras_require': {
         'test': tests_require,
     },
+    'setup_requires': [
+    ],
     'entry_points': {
         'console_scripts': [
             'MYAPP = MYAPP.cli:main',
