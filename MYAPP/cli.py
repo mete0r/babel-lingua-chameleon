@@ -17,8 +17,25 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import absolute_import
+from __future__ import print_function
 from __future__ import unicode_literals
+from argparse import ArgumentParser
+import gettext
+import os.path
+
+from . import __version__
+
+locale_dir = os.path.join(os.path.dirname(__file__), 'locale')
+t = gettext.translation('MYAPP', locale_dir, fallback=True)
+_ = t.ugettext
 
 
 def main():
-    pass
+    gettext.gettext = t.gettext
+    parser = ArgumentParser()
+    parser.add_argument('--version',
+                        action='version',
+                        version='%(prog)s {}'.format(__version__),
+                        help=_('output version information and exit'))
+    args = parser.parse_args()
+    args
