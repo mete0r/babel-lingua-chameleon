@@ -3,7 +3,7 @@ babel
 check-manifest
 coloredlogs
 pip-tools
-pyroma
+pyroma < 2.0.0
 sphinx
 sphinx-argparse
 tox
