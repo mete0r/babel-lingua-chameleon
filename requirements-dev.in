@@ -5,6 +5,7 @@ coloredlogs
 pip-tools
 pyroma
 sphinx
+sphinx-argparse
 tox
 wheel
 zc.buildout
