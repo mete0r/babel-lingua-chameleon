@@ -55,4 +55,9 @@ def configureLogging(verbosity):
         level = logging.DEBUG
     else:
         level = logging.WARNING
-    logging.basicConfig(level=level)
+    try:
+        import coloredlogs
+    except ImportError:
+        logging.basicConfig(level=level)
+    else:
+        coloredlogs.install(level)

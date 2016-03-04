@@ -1,5 +1,6 @@
 babel
 check-manifest
+coloredlogs
 pip-tools
 pyroma
 sphinx

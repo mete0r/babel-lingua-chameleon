@@ -9,8 +9,10 @@ babel==2.2.0
 check-manifest==0.31
 click==6.2                # via pip-tools
 colorama==0.3.6           # via zest.releaser
+coloredlogs==5.0
 docutils==0.12            # via pyroma, sphinx
 first==2.0.1              # via pip-tools
+humanfriendly==1.44.3     # via coloredlogs
 Jinja2==2.8               # via sphinx
 MarkupSafe==0.23          # via jinja2
 pip-tools==1.6
