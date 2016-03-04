@@ -21,9 +21,12 @@ from __future__ import print_function
 from __future__ import unicode_literals
 from argparse import ArgumentParser
 import gettext
+import logging
 import os.path
 
 from . import __version__
+
+logger = logging.getLogger(__name__)
 
 locale_dir = os.path.join(os.path.dirname(__file__), 'locale')
 t = gettext.translation('MYAPP', locale_dir, fallback=True)
@@ -37,5 +40,19 @@ def main():
                         action='version',
                         version='%(prog)s {}'.format(__version__),
                         help=_('output version information and exit'))
+    parser.add_argument('-v', '--verbose',
+                        action='count',
+                        help=_('increase verbosity'))
     args = parser.parse_args()
-    args
+    configureLogging(args.verbose)
+    logger.info('args: %s', args)
+
+
+def configureLogging(verbosity):
+    if verbosity == 1:
+        level = logging.INFO
+    elif verbosity > 1:
+        level = logging.DEBUG
+    else:
+        level = logging.WARNING
+    logging.basicConfig(level=level)
