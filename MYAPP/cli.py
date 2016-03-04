@@ -24,6 +24,12 @@ import gettext
 import logging
 import os.path
 
+# PYTHON_ARGCOMPLETE_OK
+try:
+    import argcomplete
+except ImportError:
+    argcomplete = None
+
 from . import __version__
 
 logger = logging.getLogger(__name__)
@@ -43,6 +49,8 @@ def main():
     parser.add_argument('-v', '--verbose',
                         action='count',
                         help=_('increase verbosity'))
+    if argcomplete:
+        argcomplete.autocomplete(parser)
     args = parser.parse_args()
     configureLogging(args.verbose)
     logger.info('args: %s', args)

@@ -5,6 +5,7 @@
 #    pip-compile requirements-app.in
 #
 alabaster==0.7.7          # via sphinx
+argcomplete==1.1.0
 babel==2.2.0
 check-manifest==0.31
 click==6.2                # via pip-tools
