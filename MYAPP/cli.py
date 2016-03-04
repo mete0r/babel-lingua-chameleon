@@ -41,6 +41,15 @@ _ = t.ugettext
 
 def main():
     gettext.gettext = t.gettext
+    parser = main_argparse()
+    if argcomplete:
+        argcomplete.autocomplete(parser)
+    args = parser.parse_args()
+    configureLogging(args.verbose)
+    logger.info('args: %s', args)
+
+
+def main_argparse():
     parser = ArgumentParser()
     parser.add_argument('--version',
                         action='version',
@@ -49,11 +58,7 @@ def main():
     parser.add_argument('-v', '--verbose',
                         action='count',
                         help=_('increase verbosity'))
-    if argcomplete:
-        argcomplete.autocomplete(parser)
-    args = parser.parse_args()
-    configureLogging(args.verbose)
-    logger.info('args: %s', args)
+    return parser
 
 
 def configureLogging(verbosity):
