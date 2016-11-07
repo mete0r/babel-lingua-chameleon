@@ -2,7 +2,7 @@ argcomplete
 babel
 check-manifest
 coloredlogs
-pip-tools
+pip-tools >= 1.7.0
 pyroma
 sphinx
 sphinx-argparse
