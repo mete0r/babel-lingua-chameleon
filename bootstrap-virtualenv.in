@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+#
+#   MYAPP : SOME_DESCRIPTION
+#   Copyright (C) 2015 mete0r <mete0r@sarangbang.or.kr>
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU Affero General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU Affero General Public License for more details.
+#
+#   You should have received a copy of the GNU Affero General Public License
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+def extend_parser(optparser_parse):
+    '''
+    You can add or remove options from the parser here.
+    '''
+
+
+def adjust_options(options, args):
+    '''
+    You can change options here, or change the args (if you accept
+    different kinds of arguments, be sure you modify ``args`` so it is
+    only ``[DEST_DIR]``).
+    '''
+    DEST_DIR = '.'
+    args[:] = [DEST_DIR]
+
+
+def after_install(options, home_dir):
+    '''
+    After everything is installed, this function is called.  This
+    is probably the function you are most likely to use.  An
+    example would be::
+
+        def after_install(options, home_dir):
+            subprocess.call([join(home_dir, 'bin', 'easy_install'),
+                             'MyPackage'])
+            subprocess.call([join(home_dir, 'bin', 'my-package-script'),
+                             'setup', home_dir])
+
+    This example immediately installs a package, and runs a setup
+    script from that package.
+    '''
+    from subprocess import check_call
+
+    home_dir, lib_dir, inc_dir, bin_dir = path_locations(home_dir)
+    pip = os.path.join(bin_dir, 'pip')
+    pip_sync = os.path.join(bin_dir, 'pip-sync')
+    cmd = [
+        pip, 'install', '-f', 'virtualenv_support', '--no-index', 'pip-tools',
+    ]
+    check_call(cmd)
+    cmd = [
+        pip_sync, 'requirements.txt',
+    ]
+    check_call(cmd)
+
+# vim: set filetype=python:

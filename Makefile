@@ -1,5 +1,6 @@
 define ALL
 	update-requirements
+	update-wheelhouse
 endef
 ALL:=$(shell echo $(ALL))  # to remove line-feeds
 
@@ -32,17 +33,18 @@ ifeq (1,$(offline))
 PIP_NO_INDEX:=--no-index
 endif
 
-FIND_LINKS:=-f wheelhouse
+FIND_LINKS:=-f virtualenv_support
 
 update-requirements: $(REQUIREMENTS_FILES)
-	. bin/activate && bin/pip-sync $(FIND_LINKS) $(PIP_NO_INDEX) requirements-dev.txt
+	python setup.py pip_sync $(FIND_LINKS) $(PIP_NO_INDEX) -r requirements-dev.txt
 
 requirements.txt: $(REQUIREMENTS_IN)
-	. bin/activate && bin/pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ $^
+	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
 
 requirements-dev.txt: $(REQUIREMENTS_IN_DEV)
-	. bin/activate && bin/pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ $^
+	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
 
 .PHONY: update-wheelhouse
-update-wheelhouse: requirements-dev.txt
-	bin/pip wheel -r $< -w wheelhouse $(PIP_NO_INDEX)
+update-wheelhouse: bootstrap-virtualenv.py
+bootstrap-virtualenv.py: requirements.txt bootstrap-virtualenv.in
+	python setup.py virtualenv_bootstrap_script -o $@ -r $<

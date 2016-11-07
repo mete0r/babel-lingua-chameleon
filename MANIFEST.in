@@ -3,6 +3,8 @@ include CHANGES.rst
 include Makefile
 include README.rst
 include *.py
+include bootstrap-virtualenv.in
+include bootstrap-virtualenv.py
 include buildout.cfg
 include requirements-app.in
 include requirements-dev.in

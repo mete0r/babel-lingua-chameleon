@@ -4,12 +4,19 @@ MYAPP
 SOME_DESCRIPTION
 
 
+Production environment
+----------------------
+
+   python bootstrap-virtualenv.py
+
+Maintenance note: you should populate virtualenv_support/ with wheels for
+production environment, i.e. packages specified in requirements.txt
+
+
 Development environment
 -----------------------
 
 To setup development environment::
 
-   virtualenv .
-   . bin/activate
-   pip install -U setuptools pip pip-tools
+   python setup.py virtualenv
    make
