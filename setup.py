@@ -156,7 +156,8 @@ setup_info = {
         # 'Programming Language :: Python :: 3.4',
         # 'Programming Language :: Python :: Implementation :: CPython',
     ],
-    'keywords': [],
+    'keywords': [
+    ],
     'zip_safe': False,
 }
 
