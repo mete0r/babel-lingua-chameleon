@@ -13,16 +13,22 @@ click==6.6                # via pip-tools
 clint==0.5.1              # via twine
 colorama==0.3.7           # via zest.releaser
 coloredlogs==5.2
+configparser==3.5.0       # via flake8
 docutils==0.12            # via pyroma, sphinx
+enum34==1.1.6             # via flake8
 first==2.0.1              # via pip-tools
+flake8==3.0.4
 humanfriendly==2.1        # via coloredlogs
 imagesize==0.7.1          # via sphinx
 Jinja2==2.8               # via sphinx
 MarkupSafe==0.23          # via jinja2
+mccabe==0.5.2             # via flake8
 pip-tools==1.7.0
 pkginfo==1.4.1            # via twine
 pluggy==0.4.0             # via tox
 py==1.4.31                # via tox
+pycodestyle==2.0.0        # via flake8
+pyflakes==1.2.3           # via flake8
 Pygments==2.1.3           # via sphinx
 pyroma==2.2
 pytz==2016.7              # via babel
