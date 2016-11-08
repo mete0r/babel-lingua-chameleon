@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   MYAPP : SOME_DESCRIPTION
+#   MY-APP: SOME_DESCRIPTION
 #   Copyright (C) 2015 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -35,7 +35,7 @@ from . import __version__
 logger = logging.getLogger(__name__)
 
 locale_dir = os.path.join(os.path.dirname(__file__), 'locale')
-t = gettext.translation('MYAPP', locale_dir, fallback=True)
+t = gettext.translation('MY-APP', locale_dir, fallback=True)
 _ = t.ugettext
 
 

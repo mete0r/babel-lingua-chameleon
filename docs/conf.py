@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'MYAPP'
+project = u'MY-APP'
 copyright = u'2015, mete0r'
 author = u'mete0r'
 
@@ -211,7 +211,7 @@ html_static_path = [
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MYAPP'
+htmlhelp_basename = 'MY-APP'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -235,8 +235,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        'MYAPP.tex',
-        u'MYAPP Documentation',
+        'MY-APP.tex',
+        u'MY-APP Documentation',
         u'mete0r',
         'manual'
     ),
@@ -270,8 +270,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        'MYAPP',
-        u'MYAPP Documentation',
+        'MY-APP',
+        u'MY-APP Documentation',
         [author],
         1
     )
@@ -289,10 +289,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        'MYAPP',
-        u'MYAPP Documentation',
+        'MY-APP',
+        u'MY-APP Documentation',
         author,
-        'MYAPP',
+        'MY-APP',
         'SOME_DESCRIPTION',
         'Miscellaneous'
     ),

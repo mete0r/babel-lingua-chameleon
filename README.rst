@@ -1,5 +1,5 @@
-MYAPP
-=====
+MY-APP
+======
 
 SOME_DESCRIPTION
 

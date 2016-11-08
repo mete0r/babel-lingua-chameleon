@@ -1,10 +1,10 @@
 Command-line interface
 ======================
 
-MYAPP
------
+MY-APP
+------
 
 .. argparse::
    :module: MYAPP.cli
    :func: main_argparse
-   :prog: MYAPP
+   :prog: MY-APP

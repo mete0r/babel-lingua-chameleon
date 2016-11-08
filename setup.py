@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   MYAPP : SOME_DESCRIPTION
+#   MY-APP: SOME_DESCRIPTION
 #   Copyright (C) 2015 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -91,7 +91,7 @@ tests_require = readfile('requirements-test.in')
 
 
 setup_info = {
-    'name': 'MYAPP',
+    'name': 'MY-APP',
     'version': get_version(),
     'description': 'SOME_DESCRIPTION',
     'long_description': '\n'.join([readfile('README.rst'),
@@ -100,7 +100,7 @@ setup_info = {
     'author': 'mete0r',
     'author_email': 'mete0r@sarangbang.or.kr',
     'license': 'GNU Affero General Public License v3 or later (AGPLv3+)',
-    # 'url': 'https://github.com/mete0r/MYAPP',
+    # 'url': 'https://github.com/mete0r/MY-APP',
 
     'packages': [
         'MYAPP',
