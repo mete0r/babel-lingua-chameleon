@@ -13,6 +13,7 @@
 # serve to show the default.
 import os.path
 import sys
+from textwrap import dedent
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -80,6 +81,7 @@ locale_dirs = [
 # today = ''
 # Else, today_fmt is used as the format for a strftime call.
 # today_fmt = '%B %d, %Y'
+today_fmt = '%Y-%m-%d'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -215,15 +217,20 @@ htmlhelp_basename = 'METE0R-PROJECT'
 
 # -- Options for LaTeX output ---------------------------------------------
 
+latex_preamble_kotex = dedent('''
+    \usepackage{kotex}
+'''.strip())
+
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    # 'papersize': 'letterpaper',
+    'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
-    # 'pointsize': '10pt',
+    'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
-    # 'preamble': '',
+    'preamble': '',
+    # 'preamble': latex_preamble_kotex,
 
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
