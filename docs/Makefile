@@ -19,7 +19,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = -d $(BUILDDIR)/doctrees.i18n $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest coverage gettext
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest coverage gettext intl
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -159,6 +159,9 @@ gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) locale/pot
 	@echo
 	@echo "Build finished. The message catalogs are in locale."
+
+intl:
+	sphinx-intl update --pot-dir locale/pot --language=en --language=ko
 
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes

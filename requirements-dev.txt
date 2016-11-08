@@ -9,7 +9,7 @@ argcomplete==1.6.0
 args==0.1.0               # via clint
 babel==2.3.4
 check-manifest==0.34
-click==6.6                # via pip-tools
+click==6.6                # via pip-tools, sphinx-intl
 clint==0.5.1              # via twine
 colorama==0.3.7           # via zest.releaser
 coloredlogs==5.2
@@ -34,9 +34,10 @@ pyroma==2.2
 pytz==2016.7              # via babel
 requests-toolbelt==0.7.0  # via twine
 requests==2.11.1          # via requests-toolbelt, twine
-six==1.10.0               # via pip-tools, sphinx, zest.releaser, zope.testrunner
+six==1.10.0               # via pip-tools, sphinx, sphinx-intl, zest.releaser, zope.testrunner
 snowballstemmer==1.2.1    # via sphinx
 sphinx-argparse==0.1.15
+sphinx-intl==0.9.9
 sphinx==1.4.8
 tox==2.4.1
 twine==1.8.1              # via zest.releaser
@@ -50,4 +51,4 @@ zope.testrunner==4.5.1
 
 # The following packages are commented out because they are
 # considered to be unsafe in a requirements file:
-# setuptools                # via pyroma, twine, zc.buildout, zest.releaser, zope.exceptions, zope.interface, zope.testrunner
+# setuptools                # via pyroma, sphinx-intl, twine, zc.buildout, zest.releaser, zope.exceptions, zope.interface, zope.testrunner

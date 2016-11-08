@@ -70,6 +70,11 @@ release = u'0.0'
 # Usually you set "language" from the command line for these cases.
 language = None
 
+locale_dirs = [
+    'locale/',
+    '../METE0R_PACKAGE/locale/',
+]
+
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 # today = ''
