@@ -20,5 +20,7 @@ recursive-include docs *.py
 recursive-include docs *.rst
 recursive-include docs Makefile
 recursive-include docs/locale *.pot
+recursive-include docs/locale *.po
+recursive-exclude docs/locale *.mo
 recursive-include docs/static *.css
 prune docs/build
