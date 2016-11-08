@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# MYAPP documentation build configuration file, created by
+# Documentation build configuration file, created by
 # sphinx-quickstart on Mon Nov 30 18:51:11 2015.
 #
 # This file is execfile()d with the current directory set to its
