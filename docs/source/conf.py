@@ -204,7 +204,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MYAPPdoc'
+htmlhelp_basename = 'MYAPP'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -226,7 +226,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'MYAPP.tex', u'MYAPP Documentation', u'mete0r', 'manual'),
+    (
+        master_doc,
+        'MYAPP.tex',
+        u'MYAPP Documentation',
+        u'mete0r',
+        'manual'
+    ),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -255,8 +261,13 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'myapp', u'MYAPP Documentation',
-     [author], 1)
+    (
+        master_doc,
+        'MYAPP',
+        u'MYAPP Documentation',
+        [author],
+        1
+    )
 ]
 
 # If true, show URL addresses after external links.
@@ -269,8 +280,15 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'MYAPP', u'MYAPP Documentation', author, 'MYAPP',
-     'One line description of project.', 'Miscellaneous'),
+    (
+        master_doc,
+        'MYAPP',
+        u'MYAPP Documentation',
+        author,
+        'MYAPP',
+        'SOME_DESCRIPTION',
+        'Miscellaneous'
+    ),
 ]
 
 # Documents to append as an appendix to all manuals.
