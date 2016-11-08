@@ -1,10 +1,10 @@
 Command-line interface
 ======================
 
-MY-APP
-------
+METE0R-PROJECT
+--------------
 
 .. argparse::
    :module: METE0R_PACKAGE.cli
    :func: main_argparse
-   :prog: MY-APP
+   :prog: METE0R-PROJECT

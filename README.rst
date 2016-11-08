@@ -1,5 +1,5 @@
-MY-APP
-======
+METE0R-PROJECT
+==============
 
 SOME_DESCRIPTION
 
