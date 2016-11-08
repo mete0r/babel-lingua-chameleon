@@ -84,7 +84,7 @@ def alltests():
     return unittest.TestSuite(suites)
 
 
-install_requires_filename = 'requirements-app.in'
+install_requires_filename = 'requirements.in'
 install_requires = readfile(install_requires_filename)
 
 tests_require = readfile('requirements-test.in')

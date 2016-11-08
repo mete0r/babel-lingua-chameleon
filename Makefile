@@ -11,14 +11,14 @@ endef
 REQUIREMENTS_FILES:=$(shell echo $(REQUIREMENTS_FILES))
 
 define REQUIREMENTS_IN
-	requirements-app.in
+	requirements.in
 endef
 REQUIREMENTS_IN:=$(shell echo $(REQUIREMENTS_IN))
 
 define REQUIREMENTS_IN_DEV
 	requirements-dev.in
 	requirements-test.in
-	requirements-app.in
+	requirements.in
 endef
 REQUIREMENTS_IN_DEV:=$(shell echo $(REQUIREMENTS_IN_DEV))
 
