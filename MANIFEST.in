@@ -12,9 +12,9 @@ include requirements-dev.txt
 include requirements-test.in
 include requirements.txt
 include tox.ini
-include MYAPP/locale/MY-APP.pot
-include MYAPP/locale/*/LC_MESSAGES/*.po
-exclude MYAPP/locale/*/LC_MESSAGES/*.mo
+include METE0R_PACKAGE/locale/MY-APP.pot
+include METE0R_PACKAGE/locale/*/LC_MESSAGES/*.po
+exclude METE0R_PACKAGE/locale/*/LC_MESSAGES/*.mo
 recursive-include docs *.bat
 recursive-include docs *.py
 recursive-include docs *.rst

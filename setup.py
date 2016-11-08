@@ -67,7 +67,7 @@ def readfile(path):
 
 @setup_dir
 def get_version():
-    from MYAPP import __version__
+    from METE0R_PACKAGE import __version__
     return __version__
 
 
@@ -103,19 +103,19 @@ setup_info = {
     # 'url': 'https://github.com/mete0r/MY-APP',
 
     'packages': [
-        'MYAPP',
-        'MYAPP.recipe',
-        'MYAPP.tests',
+        'METE0R_PACKAGE',
+        'METE0R_PACKAGE.recipe',
+        'METE0R_PACKAGE.tests',
     ],
     # do not use '.'; just omit to specify setup.py directory
     'package_dir': {
         # '': 'src',
     },
     'package_data': {
-        'MYAPP': [
+        'METE0R_PACKAGE': [
             'locale/*/*/*.mo',
         ],
-        # 'MYAPP.tests': [
+        # 'METE0R_PACKAGE.tests': [
         #   'files/*',
         # ],
     },
@@ -130,22 +130,22 @@ setup_info = {
         'mete0r.distutils.virtualenv == 0.0.2',
     ],
     'message_extractors': {
-        'MYAPP': [
+        'METE0R_PACKAGE': [
             ('**.py', 'python', None),
         ]
     },
     'entry_points': {
         'console_scripts': [
-            'MYAPP = MYAPP.cli:main',
+            'METE0R_PACKAGE = METE0R_PACKAGE.cli:main',
         ],
         'zc.buildout': [
-            'default = MYAPP.recipe:Recipe',
+            'default = METE0R_PACKAGE.recipe:Recipe',
         ],
         'zc.buildout.uninstall': [
-            'default = MYAPP.recipe:uninstall',
+            'default = METE0R_PACKAGE.recipe:uninstall',
         ],
         'paste.app_factory': [
-            'main = MYAPP.wsgi:app_factory',
+            'main = METE0R_PACKAGE.wsgi:app_factory',
         ],
     },
     'classifiers': [

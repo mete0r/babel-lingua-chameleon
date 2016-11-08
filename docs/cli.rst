@@ -5,6 +5,6 @@ MY-APP
 ------
 
 .. argparse::
-   :module: MYAPP.cli
+   :module: METE0R_PACKAGE.cli
    :func: main_argparse
    :prog: MY-APP
