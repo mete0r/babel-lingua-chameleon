@@ -19,5 +19,6 @@ recursive-include docs *.bat
 recursive-include docs *.py
 recursive-include docs *.rst
 recursive-include docs Makefile
+recursive-include docs/locale *.pot
 recursive-include docs/static *.css
 prune docs/build
