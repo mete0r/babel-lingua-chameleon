@@ -149,7 +149,7 @@ setup_info = {
         ],
     },
     'classifiers': [
-        # 'Development Status :: 4 - Beta',
+        'Development Status :: 1 - Planning',
         # 'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',  # noqa
         # 'Operating System :: OS Independent',
