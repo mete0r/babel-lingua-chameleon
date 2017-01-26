@@ -44,6 +44,7 @@ sphinx-intl==0.9.9
 sphinx==1.4.8
 tox==2.4.1
 twine==1.8.1              # via zest.releaser
+venusian==1.0
 virtualenv==15.0.3        # via tox
 wheel==0.29.0
 zc.buildout==2.5.3

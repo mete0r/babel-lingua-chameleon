@@ -21,6 +21,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 from argparse import ArgumentParser
 import gettext
+import importlib
 import logging
 import os.path
 
@@ -31,6 +32,7 @@ except ImportError:
     argcomplete = None
 
 from . import __version__
+from .testfixture import TestFixtures
 
 logger = logging.getLogger(__name__)
 
@@ -46,7 +48,13 @@ def main():
         argcomplete.autocomplete(parser)
     args = parser.parse_args()
     configureLogging(args.verbose)
-    logger.info('args: %s', args)
+    package = importlib.import_module(args.package)
+    testfixtures = TestFixtures(package)
+    testfixtures.scan()
+    for key in sorted(testfixtures.registry):
+        fn = testfixtures.registry[key]
+        print(', '.join(x for x in key))
+        print('    {}.{}'.format(fn.__module__, fn.__name__))
 
 
 def main_argparse():
@@ -58,6 +66,8 @@ def main_argparse():
     parser.add_argument('-v', '--verbose',
                         action='count',
                         help=_('increase verbosity'))
+    parser.add_argument('package',
+                        help=_('a python package to scan test fixtures'))
     return parser
 
 
