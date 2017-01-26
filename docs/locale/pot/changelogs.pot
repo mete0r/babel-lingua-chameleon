@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, mete0r
+# Copyright (C) 2015-2017 mete0r
 # This file is distributed under the same license as the METE0R-PROJECT package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #

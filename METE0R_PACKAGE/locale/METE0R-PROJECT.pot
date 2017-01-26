@@ -1,5 +1,5 @@
 # Translations template for METE0R-PROJECT.
-# Copyright (C) 2016 mete0r@sarangbang.or.kr
+# Copyright (C) 2016-2017 mete0r@sarangbang.or.kr
 # This file is distributed under the same license as the METE0R-PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
