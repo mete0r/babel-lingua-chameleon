@@ -2,7 +2,7 @@ Command-line interface
 ======================
 
 mete0r.testfixture
---------------
+------------------
 
 .. argparse::
    :module: mete0r_testfixture.cli

@@ -1,18 +1,66 @@
 mete0r.testfixture
-==============
+==================
 
 a testfixture helper
 
 
-Production environment
-----------------------
+Quickstart
+----------
 
-To setup production environment::
+To install::
 
-   python bootstrap-virtualenv.py
+   pip install mete0r.testfixture
 
-Maintenance note: you should populate virtualenv_support/ with wheels for
-production environment, i.e. packages specified in requirements.txt
+
+Let's assume your project has following structure::
+
+   yourproject/
+       setup.py
+       yourpackage/
+           __init__.py
+           tests/
+               __init__.py
+               test_foo.py
+               fixtures/
+                   foo.py
+                   bar.py
+
+
+Define a fixture in ``yourpackage/tests/fixtures/foo.py``::
+
+   from mete0r_testfixture.testfixture import testfixture
+
+   @testfixture('Foo')
+   def foo(fixtures):
+       return {
+           'foo': None,
+       }
+
+Define another fixture in ``yourpackage/tests/fixtures/bar.py``::
+
+    @testfixture('Bar', 'foo')
+    def bar(fixtures):
+        return {
+            'bar': fixtures.get('Foo')
+        }
+
+Now you can use them in your tests::
+
+    # yourpackage/tests/test_foo.py
+    from unittest import TestCase
+    from mete0r_testfixture.testfixture import TestFixtures
+    from . import fixtures
+
+    class FooTest(TestCase):
+
+        def test_foo(self):
+            testfixtures = TestFixtures(fixtures)
+            self.assertEquals({
+                'bar': {
+                    'foo': None,
+                },
+            }, testfixtures.get('Bar', 'foo')
+
 
 
 Development environment
