@@ -25,6 +25,7 @@ REQUIREMENTS_IN_DEV:=$(shell echo $(REQUIREMENTS_IN_DEV))
 offline?=0
 
 
+.PHONY: all
 all: $(ALL)
 
 .PHONY: update-requirements
