@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   mete0r.testfixture: a testfixture helper
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -35,7 +35,7 @@ from . import __version__
 logger = logging.getLogger(__name__)
 
 locale_dir = os.path.join(os.path.dirname(__file__), 'locale')
-t = gettext.translation('METE0R-PROJECT', locale_dir, fallback=True)
+t = gettext.translation('mete0r.testfixture', locale_dir, fallback=True)
 _ = t.ugettext
 
 

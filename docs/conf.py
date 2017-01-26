@@ -51,7 +51,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'METE0R-PROJECT'
+project = u'mete0r.testfixture'
 copyright = u'2015, mete0r'
 author = u'mete0r'
 
@@ -73,7 +73,7 @@ language = None
 
 locale_dirs = [
     'locale/',
-    '../METE0R_PACKAGE/locale/',
+    '../mete0r_testfixture/locale/',
 ]
 
 # There are two options for replacing |today|: either, you set today to some
@@ -213,7 +213,7 @@ html_static_path = [
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'METE0R-PROJECT'
+htmlhelp_basename = 'mete0r.testfixture'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -242,8 +242,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        'METE0R-PROJECT.tex',
-        u'METE0R-PROJECT Documentation',
+        'mete0r.testfixture.tex',
+        u'mete0r.testfixture Documentation',
         u'mete0r',
         'manual'
     ),
@@ -277,8 +277,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        'METE0R-PROJECT',
-        u'METE0R-PROJECT Documentation',
+        'mete0r.testfixture',
+        u'mete0r.testfixture Documentation',
         [author],
         1
     )
@@ -296,11 +296,11 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        'METE0R-PROJECT',
-        u'METE0R-PROJECT Documentation',
+        'mete0r.testfixture',
+        u'mete0r.testfixture Documentation',
         author,
-        'METE0R-PROJECT',
-        'SOME_DESCRIPTION',
+        'mete0r.testfixture',
+        'a testfixture helper',
         'Miscellaneous'
     ),
 ]

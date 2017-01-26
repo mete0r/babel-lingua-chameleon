@@ -1809,7 +1809,7 @@ def create_bootstrap_script(extra_text, python_version=''):
 
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   mete0r.testfixture: a testfixture helper
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify

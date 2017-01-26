@@ -13,9 +13,9 @@ include requirements-test.in
 include requirements.txt
 include tox.ini
 include virtualenv_support/README.rst
-include METE0R_PACKAGE/locale/METE0R-PROJECT.pot
-include METE0R_PACKAGE/locale/*/LC_MESSAGES/*.po
-exclude METE0R_PACKAGE/locale/*/LC_MESSAGES/*.mo
+include mete0r_testfixture/locale/mete0r.testfixture.pot
+include mete0r_testfixture/locale/*/LC_MESSAGES/*.po
+exclude mete0r_testfixture/locale/*/LC_MESSAGES/*.mo
 recursive-include docs *.bat
 recursive-include docs *.py
 recursive-include docs *.rst

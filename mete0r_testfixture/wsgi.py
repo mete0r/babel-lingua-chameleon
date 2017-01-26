@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   mete0r.testfixture: a testfixture helper
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -19,18 +19,15 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
-from unittest import TestCase
-import os.path
-import shutil
 
+def app_factory(global_config, **local_conf):
+    ''' PasteDeploy app_factory
 
-class AppTest(TestCase):
-
-    def setUp(self):
-        name = self.id()
-        if os.path.exists(name):
-            shutil.rmtree(name)
-        os.mkdir(name)
-
-    def test_nothing(self):
-        pass
+    see http://pythonpaste.org/deploy/
+    '''
+    def app(environ, start_response):
+        status = '200 OK'
+        headers = [('Content-Type', 'text/plain; charset=utf-8')]
+        start_response(status, headers)
+        yield 'app ok'
+    return app

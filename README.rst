@@ -1,7 +1,7 @@
-METE0R-PROJECT
+mete0r.testfixture
 ==============
 
-SOME_DESCRIPTION
+a testfixture helper
 
 
 Production environment

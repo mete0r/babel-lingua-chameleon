@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   mete0r.testfixture: a testfixture helper
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -18,6 +18,3 @@
 #
 from __future__ import absolute_import
 from __future__ import unicode_literals
-
-
-__version__ = '0.0.0'
