@@ -51,10 +51,24 @@ def main():
     package = importlib.import_module(args.package)
     testfixtures = TestFixtures(package)
     testfixtures.scan()
+
+    table = []
     for key in sorted(testfixtures.registry):
         fn = testfixtures.registry[key]
-        print(', '.join(x for x in key))
-        print('    {}.{}'.format(fn.__module__, fn.__name__))
+        table.append([
+            ', '.join(x for x in key),
+            '{}.{}'.format(fn.__module__, fn.__name__),
+        ])
+    try:
+        from tabulate import tabulate
+    except ImportError:
+        for key, location in table:
+            print('{}\t{}'.format(key, location))
+    else:
+        print(tabulate(table, headers=[
+            'key',
+            'location',
+        ], tablefmt='grid'))
 
 
 def main_argparse():

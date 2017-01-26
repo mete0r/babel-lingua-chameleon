@@ -62,6 +62,12 @@ Now you can use them in your tests::
             }, testfixtures.get('Bar', 'foo')
 
 
+You can also list test fixtures defined in your packages::
+
+   $ mete0r-testfixture-scan yourpackage
+   Foo	        yourpackage.tests.fixtures.foo.foo
+   Bar, foo	yourpackage.tests.fixtures.bar.bar
+
 
 Development environment
 -----------------------

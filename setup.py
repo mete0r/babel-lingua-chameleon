@@ -136,7 +136,7 @@ setup_info = {
     },
     'entry_points': {
         'console_scripts': [
-            'mete0r_testfixture = mete0r_testfixture.cli:main',
+            'mete0r-testfixture-scan = mete0r_testfixture.cli:main',
         ],
         'zc.buildout': [
             'default = mete0r_testfixture.recipe:Recipe',
