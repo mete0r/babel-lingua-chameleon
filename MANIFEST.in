@@ -12,6 +12,7 @@ include requirements-dev.txt
 include requirements-test.in
 include requirements.txt
 include tox.ini
+include virtualenv_support/README.rst
 include METE0R_PACKAGE/locale/METE0R-PROJECT.pot
 include METE0R_PACKAGE/locale/*/LC_MESSAGES/*.po
 exclude METE0R_PACKAGE/locale/*/LC_MESSAGES/*.mo
