@@ -154,11 +154,13 @@ setup_info = {
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',  # noqa
         # 'Operating System :: OS Independent',
         # 'Programming Language :: Python',
-        # 'Programming Language :: Python :: 2.7',
-        # 'Programming Language :: Python :: 3.4',
-        # 'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: Jython',
     ],
     'keywords': [
+        'test fixture',
     ],
     'zip_safe': False,
 }
