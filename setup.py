@@ -139,13 +139,13 @@ setup_info = {
             'mete0r-testfixture-scan = mete0r_testfixture.cli:main',
         ],
         'zc.buildout': [
-            'default = mete0r_testfixture.recipe:Recipe',
+            # 'default = mete0r_testfixture.recipe:Recipe',
         ],
         'zc.buildout.uninstall': [
-            'default = mete0r_testfixture.recipe:uninstall',
+            # 'default = mete0r_testfixture.recipe:uninstall',
         ],
         'paste.app_factory': [
-            'main = mete0r_testfixture.wsgi:app_factory',
+            # 'main = mete0r_testfixture.wsgi:app_factory',
         ],
     },
     'classifiers': [
