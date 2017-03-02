@@ -38,7 +38,7 @@ try:
 except ImportError:
     import configparser as ConfigParser
 
-__version__ = "15.0.3"
+__version__ = "15.1.0"
 virtualenv_version = __version__  # legacy
 
 if sys.version_info < (2, 6):
@@ -157,6 +157,8 @@ elif majver == 3:
             '_collections_abc',
             '_bootlocale',
         ])
+    if minver >= 6:
+        REQUIRED_MODULES.extend(['enum'])
 
 if is_pypy:
     # these are needed to correctly display the exceptions that may happen
@@ -891,7 +893,6 @@ def install_wheel(project_names, py_executable, search_dirs=None,
         "PIP_FIND_LINKS": findlinks,
         "PIP_USE_WHEEL": "1",
         "PIP_ONLY_BINARY": ":all:",
-        "PIP_PRE": "1",
         "PIP_USER": "0",
     }
 
