@@ -19,11 +19,12 @@
 from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import unicode_literals
-import logging
-
 from unittest import TestCase
-import os.path
-import shutil
+import logging
+import io
+
+
+from .utils import isolated_directory
 
 
 class AppTest(TestCase):
@@ -33,11 +34,8 @@ class AppTest(TestCase):
         name = self.id()
         return logging.getLogger(name)
 
-    def setUp(self):
-        name = self.id()
-        if os.path.exists(name):
-            shutil.rmtree(name)
-        os.mkdir(name)
-
+    @isolated_directory
     def test_nothing(self):
         self.logger.debug('test!')
+        with io.open('foo.txt', 'wb'):
+            pass
