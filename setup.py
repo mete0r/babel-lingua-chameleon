@@ -106,6 +106,8 @@ setup_info = {
         'METE0R_PACKAGE',
         'METE0R_PACKAGE.recipe',
         'METE0R_PACKAGE.tests',
+        'METE0R_PACKAGE.tests.fixtures',
+        'METE0R_PACKAGE.tests.layers',
     ],
     # do not use '.'; just omit to specify setup.py directory
     'package_dir': {
