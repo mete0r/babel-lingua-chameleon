@@ -17,7 +17,9 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import absolute_import
+from __future__ import print_function
 from __future__ import unicode_literals
+import logging
 
 from unittest import TestCase
 import os.path
@@ -26,6 +28,11 @@ import shutil
 
 class AppTest(TestCase):
 
+    @property
+    def logger(self):
+        name = self.id()
+        return logging.getLogger(name)
+
     def setUp(self):
         name = self.id()
         if os.path.exists(name):
@@ -33,4 +40,4 @@ class AppTest(TestCase):
         os.mkdir(name)
 
     def test_nothing(self):
-        pass
+        self.logger.debug('test!')
