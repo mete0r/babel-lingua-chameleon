@@ -33,6 +33,7 @@ sys.path.insert(0, prj_path)
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
     'sphinxarg.ext',
 ]
 
@@ -114,6 +115,9 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/2.7', None),
+}
 
 # -- Options for HTML output ----------------------------------------------
 
