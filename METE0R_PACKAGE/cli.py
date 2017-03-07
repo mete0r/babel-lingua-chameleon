@@ -23,6 +23,7 @@ from argparse import ArgumentParser
 import gettext
 import logging
 import os.path
+import sys
 
 # PYTHON_ARGCOMPLETE_OK
 try:
@@ -32,11 +33,15 @@ except ImportError:
 
 from . import __version__
 
+PY3 = sys.version_info.major == 3
 logger = logging.getLogger(__name__)
 
 locale_dir = os.path.join(os.path.dirname(__file__), 'locale')
 t = gettext.translation('METE0R-PROJECT', locale_dir, fallback=True)
-_ = t.ugettext
+if PY3:
+    _ = t.gettext
+else:
+    _ = t.ugettext
 
 
 def main():
