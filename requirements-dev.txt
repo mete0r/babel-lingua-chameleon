@@ -39,6 +39,7 @@ pyparsing==2.1.10         # via packaging
 pyroma==2.2
 pytz==2016.10             # via babel
 readme-renderer==16.0     # via restview
+repoze.sphinx.autointerface==0.8
 requests-toolbelt==0.7.1  # via twine
 requests==2.13.0          # via requests-toolbelt, sphinx, twine
 restview==2.7.0
@@ -54,8 +55,8 @@ wheel==0.29.0
 zc.buildout==2.8.0
 zest.releaser==6.9
 zope.exceptions==4.0.8    # via zope.testrunner
-zope.interface==4.3.3     # via zope.exceptions, zope.testrunner
+zope.interface==4.3.3     # via repoze.sphinx.autointerface, zope.exceptions, zope.testrunner
 zope.testrunner==4.6.0
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools                # via pyroma, sphinx-intl, twine, zc.buildout, zest.releaser, zope.exceptions, zope.interface, zope.testrunner
+# setuptools                # via pyroma, repoze.sphinx.autointerface, sphinx-intl, twine, zc.buildout, zest.releaser, zope.exceptions, zope.interface, zope.testrunner

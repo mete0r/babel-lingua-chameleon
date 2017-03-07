@@ -5,6 +5,7 @@ coloredlogs
 flake8
 pip-tools >= 1.7.0
 pyroma
+repoze.sphinx.autointerface
 restview
 sphinx
 sphinx-argparse
