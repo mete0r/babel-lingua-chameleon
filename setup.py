@@ -138,7 +138,7 @@ setup_info = {
     },
     'entry_points': {
         'console_scripts': [
-            'METE0R_PROJECT = METE0R_PACKAGE.cli:main',
+            'METE0R-PROJECT = METE0R_PACKAGE.cli:main',
         ],
         'zc.buildout': [
             'default = METE0R_PACKAGE.recipe:Recipe',
