@@ -6,6 +6,7 @@ ALL:=$(shell echo $(ALL))  # to remove line-feeds
 
 define REQUIREMENTS_FILES
 	requirements-dev.txt
+	requirements-test.txt
 	requirements.txt
 endef
 REQUIREMENTS_FILES:=$(shell echo $(REQUIREMENTS_FILES))
@@ -14,6 +15,12 @@ define REQUIREMENTS_IN
 	requirements.in
 endef
 REQUIREMENTS_IN:=$(shell echo $(REQUIREMENTS_IN))
+
+define REQUIREMENTS_IN_TEST
+	requirements-test.in
+	requirements.in
+endef
+REQUIREMENTS_IN_TEST:=$(shell echo $(REQUIREMENTS_IN_TEST))
 
 define REQUIREMENTS_IN_DEV
 	requirements-dev.in
@@ -40,6 +47,9 @@ update-requirements: $(REQUIREMENTS_FILES)
 	python setup.py pip_sync $(FIND_LINKS) $(PIP_NO_INDEX) -r requirements-dev.txt
 
 requirements.txt: $(REQUIREMENTS_IN)
+	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+
+requirements-test.txt: $(REQUIREMENTS_IN_TEST)
 	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
 
 requirements-dev.txt: $(REQUIREMENTS_IN_DEV)
