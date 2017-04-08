@@ -1,3 +1,4 @@
+alabaster >= 0.7.10
 argcomplete
 babel
 check-manifest
@@ -7,7 +8,7 @@ pip-tools >= 1.7.0
 pyroma
 repoze.sphinx.autointerface
 restview
-sphinx
+sphinx >= 1.5
 sphinx-argparse
 sphinx-intl
 tox
