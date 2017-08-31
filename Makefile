@@ -35,6 +35,7 @@ PIP_NO_INDEX:=--no-index
 endif
 
 FIND_LINKS:=-f virtualenv_support
+VENV	:= . bin/activate &&
 
 
 .PHONY: all
@@ -42,19 +43,19 @@ all: $(ALL)
 
 .PHONY: update-requirements
 update-requirements: $(REQUIREMENTS_FILES)
-	python setup.py pip_sync $(FIND_LINKS) $(PIP_NO_INDEX) -r requirements-dev.txt
+	$(VENV) pip-sync $(FIND_LINKS) $(PIP_NO_INDEX) requirements-dev.txt
 
 requirements.txt: $(REQUIREMENTS_IN)
-	. bin/activate && pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
-	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
+	$(VENV)	pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
+	$(VENV)	wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
 
 requirements-test.txt: $(REQUIREMENTS_IN_TEST)
-	. bin/activate && pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
-	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
+	$(VENV) pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
+	$(VENV) pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
 requirements-dev.txt: $(REQUIREMENTS_IN_DEV)
-	. bin/activate && pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
-	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
+	$(VENV) pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
+	$(VENV) pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
 .PHONY: bootstrap-virtualenv
 bootstrap-virtualenv.py: requirements.txt bootstrap-virtualenv.in
