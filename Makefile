@@ -1,6 +1,5 @@
 define ALL
 	update-requirements
-	update-wheelhouse
 endef
 ALL:=$(shell echo $(ALL))  # to remove line-feeds
 
@@ -31,31 +30,32 @@ REQUIREMENTS_IN_DEV:=$(shell echo $(REQUIREMENTS_IN_DEV))
 
 offline?=0
 
-
-.PHONY: all
-all: $(ALL)
-
-.PHONY: update-requirements
-
 ifeq (1,$(offline))
 PIP_NO_INDEX:=--no-index
 endif
 
 FIND_LINKS:=-f virtualenv_support
 
+
+.PHONY: all
+all: $(ALL)
+
+.PHONY: update-requirements
 update-requirements: $(REQUIREMENTS_FILES)
 	python setup.py pip_sync $(FIND_LINKS) $(PIP_NO_INDEX) -r requirements-dev.txt
 
 requirements.txt: $(REQUIREMENTS_IN)
 	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
 
 requirements-test.txt: $(REQUIREMENTS_IN_TEST)
 	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
 requirements-dev.txt: $(REQUIREMENTS_IN_DEV)
 	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
-.PHONY: update-wheelhouse
-update-wheelhouse: bootstrap-virtualenv.py
+.PHONY: bootstrap-virtualenv
 bootstrap-virtualenv.py: requirements.txt bootstrap-virtualenv.in
 	python setup.py virtualenv_bootstrap_script -o $@ -r $<
