@@ -4,8 +4,11 @@ babel
 check-manifest
 coloredlogs
 flake8
+jupyter
 pip-tools >= 1.9.0
 pyroma
+pyside
+qtconsole
 repoze.sphinx.autointerface
 restview
 sphinx >= 1.5
