@@ -45,15 +45,15 @@ update-requirements: $(REQUIREMENTS_FILES)
 	python setup.py pip_sync $(FIND_LINKS) $(PIP_NO_INDEX) -r requirements-dev.txt
 
 requirements.txt: $(REQUIREMENTS_IN)
-	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+	. bin/activate && pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
 	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
 
 requirements-test.txt: $(REQUIREMENTS_IN_TEST)
-	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+	. bin/activate && pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
 	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
 requirements-dev.txt: $(REQUIREMENTS_IN_DEV)
-	python setup.py pip_compile $(FIND_LINKS) $(PIP_NO_INDEX) -o $@ -c "$^"
+	. bin/activate && pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
 	. bin/activate && pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
 .PHONY: bootstrap-virtualenv
