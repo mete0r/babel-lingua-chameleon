@@ -10,6 +10,7 @@ include requirements.in
 include requirements-dev.in
 include requirements-dev.txt
 include requirements-test.in
+include requirements-test.txt
 include requirements.txt
 include tox.ini
 include virtualenv_support/README.rst
