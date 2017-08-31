@@ -26,4 +26,7 @@ recursive-include docs/locale *.pot
 recursive-include docs/locale *.po
 recursive-exclude docs/locale *.mo
 recursive-include docs/static *.css
+recursive-include notebooks *.rst
+recursive-include notebooks *.ipynb
 prune docs/build
+prune notebooks/.ipynb_checkpoints

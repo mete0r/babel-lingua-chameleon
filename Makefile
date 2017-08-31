@@ -60,3 +60,8 @@ requirements-dev.txt: $(REQUIREMENTS_IN_DEV)
 .PHONY: bootstrap-virtualenv
 bootstrap-virtualenv.py: requirements.txt bootstrap-virtualenv.in
 	python setup.py virtualenv_bootstrap_script -o $@ -r $<
+
+
+.PHONY: notebook
+notebook:
+	$(VENV)	jupyter notebook --notebook-dir=notebooks

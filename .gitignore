@@ -12,6 +12,7 @@
 /lib-python
 /lib_pypy
 /local
+/notebooks/.ipynb_checkpoints
 /parts
 /pip-selfcheck.json
 /setuptools-*
