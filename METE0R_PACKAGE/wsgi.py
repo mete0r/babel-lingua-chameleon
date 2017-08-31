@@ -26,8 +26,8 @@ def app_factory(global_config, **local_conf):
     see http://pythonpaste.org/deploy/
     '''
     def app(environ, start_response):
-        status = '200 OK'
-        headers = [('Content-Type', 'text/plain; charset=utf-8')]
+        status = b'200 OK'
+        headers = [(b'Content-Type', b'text/plain; charset=utf-8')]
         start_response(status, headers)
-        yield 'app ok'
+        yield b'app ok'
     return app
