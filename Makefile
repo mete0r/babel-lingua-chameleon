@@ -47,7 +47,7 @@ update-requirements: $(REQUIREMENTS_FILES)
 
 requirements.txt: $(REQUIREMENTS_IN)
 	$(VENV)	pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
-	$(VENV)	wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
+	$(VENV)	pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
 
 requirements-test.txt: $(REQUIREMENTS_IN_TEST)
 	$(VENV) pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
