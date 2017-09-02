@@ -4,13 +4,7 @@
 #
 #    pip-compile --output-file requirements-test.txt requirements-test.in requirements.in
 #
-appdirs==1.4.3            # via setuptools
-packaging==16.8           # via setuptools
-pyparsing==2.2.0          # via packaging
-six==1.10.0               # via packaging, setuptools, zope.testrunner
+six==1.10.0               # via zope.testrunner
 zope.exceptions==4.0.8    # via zope.testrunner
 zope.interface==4.3.3     # via zope.exceptions, zope.testrunner
 zope.testrunner==4.6.0
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools                # via zope.exceptions, zope.interface, zope.testrunner
