@@ -56,13 +56,17 @@ def main():
 
 def main_argparse():
     parser = ArgumentParser()
-    parser.add_argument('--version',
-                        action='version',
-                        version='%(prog)s {}'.format(__version__),
-                        help=_('output version information and exit'))
-    parser.add_argument('-v', '--verbose',
-                        action='count',
-                        help=_('increase verbosity'))
+    parser.add_argument(
+        '--version',
+        action='version',
+        version='%(prog)s {}'.format(__version__),
+        help=_('output version information and exit')
+    )
+    parser.add_argument(
+        '-v', '--verbose',
+        action='count',
+        help=_('increase verbosity')
+    )
     return parser
 
 
