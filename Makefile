@@ -42,8 +42,10 @@ VENV	:= . bin/activate &&
 all: $(ALL)
 
 .PHONY: update-requirements
-update-requirements: $(REQUIREMENTS_FILES)
+update-requirements: .pip-sync
+.pip-sync: $(REQUIREMENTS_FILES)
 	$(VENV) pip-sync $(FIND_LINKS) $(PIP_NO_INDEX) requirements-dev.txt
+	$(VENV) pip freeze > .pip-sync
 
 requirements.txt: $(REQUIREMENTS_IN)
 	$(VENV)	pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^

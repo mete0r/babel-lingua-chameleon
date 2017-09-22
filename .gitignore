@@ -1,6 +1,7 @@
 /.coverage
 /.eggs
 /.installed.cfg
+/.pip-sync
 /.tox
 /bin
 /build
