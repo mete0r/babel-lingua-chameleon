@@ -22,6 +22,12 @@ define REQUIREMENTS_IN_TEST
 endef
 REQUIREMENTS_IN_TEST:=$(shell echo $(REQUIREMENTS_IN_TEST))
 
+define REQUIREMENTS_IN_DOCS
+	requirements-docs.in
+	requirements.in
+endef
+REQUIREMENTS_IN_DOCS:=$(shell echo $(REQUIREMENTS_IN_DOCS))
+
 define REQUIREMENTS_IN_DEV
 	requirements-dev.in
 	requirements-docs.in
