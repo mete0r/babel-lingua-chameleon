@@ -8,6 +8,7 @@ define REQUIREMENTS_FILES
 	requirements/docs.txt
 	requirements/lint.txt
 	requirements/test.txt
+	requirements/site.txt
 	requirements.txt
 endef
 REQUIREMENTS_FILES:=$(shell echo $(REQUIREMENTS_FILES))
@@ -16,6 +17,12 @@ define REQUIREMENTS_IN
 	requirements.in
 endef
 REQUIREMENTS_IN:=$(shell echo $(REQUIREMENTS_IN))
+
+define REQUIREMENTS_IN_SITE
+	requirements.in
+	requirements/site.in
+endef
+REQUIREMENTS_IN_SITE:=$(shell echo $(REQUIREMENTS_IN_SITE))
 
 define REQUIREMENTS_IN_TEST
 	requirements/test.in
@@ -39,6 +46,7 @@ define REQUIREMENTS_IN_DEV
 	requirements/docs.in
 	requirements/lint.in
 	requirements/test.in
+	requirements/site.in
 	requirements.in
 endef
 REQUIREMENTS_IN_DEV:=$(shell echo $(REQUIREMENTS_IN_DEV))
@@ -65,6 +73,10 @@ update-requirements: .pip-sync
 requirements.txt: $(REQUIREMENTS_IN)
 	$(VENV)	pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
 	$(VENV)	pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@ -w virtualenv_support
+
+requirements/site.txt: $(REQUIREMENTS_IN_SITE)
+	$(VENV) pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
+	$(VENV) pip wheel $(FIND_LINKS) $(PIP_NO_INDEX) --no-deps -r $@
 
 requirements/test.txt: $(REQUIREMENTS_IN_TEST)
 	$(VENV) pip-compile $(FIND_LINKS) $(PIP_NO_INDEX) $(pip-compile-options) -o $@ $^
