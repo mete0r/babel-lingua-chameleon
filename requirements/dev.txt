@@ -51,7 +51,7 @@ pandocfilters==1.4.2      # via nbconvert
 pathlib2==2.3.0           # via ipython, pickleshare
 pexpect==4.2.1            # via ipython
 pickleshare==0.7.4        # via ipython
-pip-tools==1.9.0
+pip-tools==2.0.2
 pkginfo==1.4.1            # via twine
 pluggy==0.5.1             # via tox
 prompt-toolkit==1.0.15    # via ipython, jupyter-console

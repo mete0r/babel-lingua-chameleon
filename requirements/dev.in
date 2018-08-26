@@ -2,7 +2,7 @@ argcomplete
 babel
 coloredlogs
 jupyter
-pip-tools >= 1.9.0
+pip-tools >= 2.0.2
 pyside
 qtconsole
 restview
