@@ -15,6 +15,8 @@ include requirements/docs.in
 include requirements/docs.txt
 include requirements/lint.in
 include requirements/lint.txt
+include requirements/site.in
+include requirements/site.txt
 include requirements/test.in
 include requirements/test.txt
 include tox.ini
