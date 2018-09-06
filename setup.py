@@ -104,7 +104,6 @@ setup_info = {
 
     'packages': [
         'babel_lingua_chameleon',
-        'babel_lingua_chameleon.recipe',
         'babel_lingua_chameleon.tests',
         'babel_lingua_chameleon.tests.fixtures',
         'babel_lingua_chameleon.tests.layers',
@@ -140,18 +139,6 @@ setup_info = {
         'babel.extractors': [
             'lingua-chameleon = babel_'
             'lingua_chameleon.extractors:extract_chameleon'
-        ],
-        'console_scripts': [
-            'babel-lingua-chameleon = babel_lingua_chameleon.cli:main',
-        ],
-        'zc.buildout': [
-            'default = babel_lingua_chameleon.recipe:Recipe',
-        ],
-        'zc.buildout.uninstall': [
-            'default = babel_lingua_chameleon.recipe:uninstall',
-        ],
-        'paste.app_factory': [
-            'main = babel_lingua_chameleon.wsgi:app_factory',
         ],
     },
     'classifiers': [
