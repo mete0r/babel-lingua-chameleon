@@ -1,0 +1,9 @@
+<html xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="foo">
+  <head>
+    <title i18n:translate="page title">Foo Bar</title>
+  </head>
+  <body>
+    <span i18n:translate="" i18n:comment="This is the body string">Qux</span>
+  </body>
+</html>

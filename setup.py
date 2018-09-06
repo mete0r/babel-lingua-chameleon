@@ -117,9 +117,9 @@ setup_info = {
         'babel_lingua_chameleon': [
             'locale/*/*/*.mo',
         ],
-        # 'babel_lingua_chameleon.tests': [
-        #   'files/*',
-        # ],
+        'babel_lingua_chameleon.tests': [
+          'fixtures/*',
+        ],
     },
     'install_requires': install_requires,
     'test_suite': '__main__.alltests',
@@ -137,6 +137,10 @@ setup_info = {
         ]
     },
     'entry_points': {
+        'babel.extractors': [
+            'lingua-chameleon = babel_'
+            'lingua_chameleon.extractors:extract_chameleon'
+        ],
         'console_scripts': [
             'babel-lingua-chameleon = babel_lingua_chameleon.cli:main',
         ],
