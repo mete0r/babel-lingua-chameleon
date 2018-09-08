@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2017 mete0r
-# This file is distributed under the same license as the METE0R-PROJECT package.
+# Copyright (C) 2015-2018 arbeitmachtfrei77
+# This file is distributed under the same license as the babel-lingua-chameleon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: METE0R-PROJECT 0.0\n"
+"Project-Id-Version: babel-lingua-chameleon 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-09 07:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"

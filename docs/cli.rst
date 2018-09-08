@@ -1,10 +1,10 @@
 Command-line interface
 ======================
 
-METE0R-PROJECT
+babel-lingua-chameleon
 --------------
 
 .. argparse::
-   :module: METE0R_PACKAGE.cli
+   :module: babel_lingua_chameleon.cli
    :func: main_argparse
-   :prog: METE0R-PROJECT
+   :prog: babel-lingua-chameleon

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   babel-lingua-chameleon: Babel extractor for Chameleon templates
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -17,25 +17,17 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import absolute_import
-from __future__ import print_function
 from __future__ import unicode_literals
-from unittest import TestCase
-import logging
-import io
 
 
-from .utils import isolated_directory
+def app_factory(global_config, **local_conf):
+    ''' PasteDeploy app_factory
 
-
-class AppTest(TestCase):
-
-    @property
-    def logger(self):
-        name = self.id()
-        return logging.getLogger(name)
-
-    @isolated_directory
-    def test_nothing(self):
-        self.logger.debug('test!')
-        with io.open('foo.txt', 'wb'):
-            pass
+    see http://pythonpaste.org/deploy/
+    '''
+    def app(environ, start_response):
+        status = b'200 OK'
+        headers = [(b'Content-Type', b'text/plain; charset=utf-8')]
+        start_response(status, headers)
+        yield b'app ok'
+    return app

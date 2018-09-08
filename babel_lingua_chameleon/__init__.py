@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
-#   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
+#   babel-lingua-chameleon: Babel extractor for Chameleon templates
+#   Copyright (C) 2015-2018 arbeitmachtfrei77 <arbeitmachtfrei77@gmail.com>
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as published by
@@ -20,14 +20,4 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 
 
-def app_factory(global_config, **local_conf):
-    ''' PasteDeploy app_factory
-
-    see http://pythonpaste.org/deploy/
-    '''
-    def app(environ, start_response):
-        status = b'200 OK'
-        headers = [(b'Content-Type', b'text/plain; charset=utf-8')]
-        start_response(status, headers)
-        yield b'app ok'
-    return app
+__version__ = '0.0.0'

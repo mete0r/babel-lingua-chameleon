@@ -1,12 +1,12 @@
-# Korean translations for METE0R-PROJECT.
-# Copyright (C) 2016-2017 mete0r@sarangbang.or.kr
-# This file is distributed under the same license as the METE0R-PROJECT project.
+# Korean translations for babel-lingua-chameleon.
+# Copyright (C) 2016-2017 arbeitmachtfrei77@gmail.com
+# This file is distributed under the same license as the babel-lingua-chameleon project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: METE0R-PROJECT 0.0.0\n"
-"Report-Msgid-Bugs-To: mete0r@sarangbang.or.kr\n"
+"Project-Id-Version: babel-lingua-chameleon 0.0.0\n"
+"Report-Msgid-Bugs-To: arbeitmachtfrei77@gmail.com\n"
 "POT-Creation-Date: 2016-03-04 18:22+0900\n"
 "PO-Revision-Date: 2016-02-27 19:35+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.2.0\n"
 
-#: METE0R_PACKAGE/cli.py:42
+#: babel_lingua_chameleon/cli.py:42
 msgid "output version information and exit"
 msgstr "버전 정보를 출력하고 끝냅니다"
 
-#: METE0R_PACKAGE/cli.py:45
+#: babel_lingua_chameleon/cli.py:45
 msgid "increase verbosity"
 msgstr "로그 출력 수준을 높입니다"
 

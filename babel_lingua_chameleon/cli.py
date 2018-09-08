@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   babel-lingua-chameleon: Babel extractor for Chameleon templates
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -37,7 +37,7 @@ PY3 = sys.version_info.major == 3
 logger = logging.getLogger(__name__)
 
 locale_dir = os.path.join(os.path.dirname(__file__), 'locale')
-t = gettext.translation('METE0R-PROJECT', locale_dir, fallback=True)
+t = gettext.translation('babel-lingua-chameleon', locale_dir, fallback=True)
 if PY3:
     _ = t.gettext
 else:

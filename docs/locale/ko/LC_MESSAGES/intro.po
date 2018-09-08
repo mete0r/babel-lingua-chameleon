@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2017 mete0r
+# Copyright (C) 2015-2018 arbeitmachtfrei77
 # This file is distributed under the same license as the
-# METE0R-PROJECT package.
-# mete0r <mete0r@sarangbang.or.kr>, 2016.
+# babel-lingua-chameleon package.
+# mete0r <arbeitmachtfrei77@gmail.com>, 2016.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: METE0R-PROJECT 0.0\n"
+"Project-Id-Version: babel-lingua-chameleon 0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-09 07:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: mete0r <mete0r@sarangbang.or.kr>\n"
+"Last-Translator: mete0r <arbeitmachtfrei77@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Generated-By: Babel 2.3.4\n"
 
 #: ../../../README.rst:2
-msgid "METE0R-PROJECT"
+msgid "babel-lingua-chameleon"
 msgstr ""
 
 #: ../../../README.rst:4
-msgid "SOME_DESCRIPTION"
+msgid "Babel extractor for Chameleon templates"
 msgstr ""
 
 #: ../../../README.rst:8

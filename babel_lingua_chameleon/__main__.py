@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   babel-lingua-chameleon: Babel extractor for Chameleon templates
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -17,24 +17,9 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 from __future__ import absolute_import
-from __future__ import print_function
 from __future__ import unicode_literals
-from functools import wraps
-import os.path
-import shutil
+from .cli import main
 
 
-def isolated_directory(test_fn):
-    @wraps(test_fn)
-    def wrapper(self):
-        name = self.id()
-        cwd = os.getcwd()
-        if os.path.exists(name):
-            shutil.rmtree(name)
-        os.makedirs(name)
-        os.chdir(name)
-        try:
-            test_fn(self)
-        finally:
-            os.chdir(cwd)
-    return wrapper
+if __name__ == '__main__':
+    main()

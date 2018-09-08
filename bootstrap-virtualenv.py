@@ -1810,8 +1810,8 @@ def create_bootstrap_script(extra_text, python_version=''):
 
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
-#   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
+#   babel-lingua-chameleon: Babel extractor for Chameleon templates
+#   Copyright (C) 2015-2018 arbeitmachtfrei77 <arbeitmachtfrei77@gmail.com>
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as published by

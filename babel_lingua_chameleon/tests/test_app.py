@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#   METE0R-PROJECT: SOME_DESCRIPTION
+#   babel-lingua-chameleon: Babel extractor for Chameleon templates
 #   Copyright (C) 2015-2017 mete0r <mete0r@sarangbang.or.kr>
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,23 @@
 from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import unicode_literals
+from unittest import TestCase
 import logging
+import io
 
 
-logger = logging.getLogger(__name__)
+from .utils import isolated_directory
+
+
+class AppTest(TestCase):
+
+    @property
+    def logger(self):
+        name = self.id()
+        return logging.getLogger(name)
+
+    @isolated_directory
+    def test_nothing(self):
+        self.logger.debug('test!')
+        with io.open('foo.txt', 'wb'):
+            pass

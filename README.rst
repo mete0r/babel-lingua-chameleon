@@ -1,7 +1,7 @@
-METE0R-PROJECT
-==============
+babel-lingua-chameleon
+======================
 
-SOME_DESCRIPTION
+Babel extractor for Chameleon templates
 
 
 Production environment
