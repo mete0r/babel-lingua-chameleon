@@ -74,7 +74,7 @@ qtconsole==4.4.1
 readme-renderer==21.0     # via restview
 repoze.sphinx.autointerface==0.8
 requests-toolbelt==0.8.0  # via twine
-requests==2.19.1          # via requests-toolbelt, sphinx, twine, zest.releaser
+requests==2.20.0
 restview==2.9.1
 send2trash==1.5.0         # via notebook
 simplegeneric==0.8.1      # via ipython

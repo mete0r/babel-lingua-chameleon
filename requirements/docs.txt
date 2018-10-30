@@ -22,7 +22,7 @@ pygments==2.2.0           # via sphinx
 pyparsing==2.2.0          # via packaging
 pytz==2018.5              # via babel
 repoze.sphinx.autointerface==0.8
-requests==2.19.1          # via sphinx
+requests==2.20.0
 six==1.11.0               # via packaging, sphinx, sphinx-intl
 snowballstemmer==1.2.1    # via sphinx
 sphinx-argparse==0.2.2
