@@ -46,7 +46,7 @@ mccabe==0.6.1             # via flake8
 mistune==0.8.3            # via nbconvert
 nbconvert==5.3.1          # via jupyter, notebook
 nbformat==4.4.0           # via ipywidgets, nbconvert, notebook
-notebook==5.6.0           # via jupyter, widgetsnbextension
+notebook==5.7.2
 packaging==17.1           # via sphinx
 pandocfilters==1.4.2      # via nbconvert
 parso==0.3.1              # via jedi
