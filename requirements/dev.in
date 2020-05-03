@@ -4,8 +4,6 @@ coloredlogs
 jupyter
 notebook >= 5.7.8
 pip-tools >= 2.0.2
-pyside
-qtconsole
 restview
 tox
 wheel
